@@ -1,0 +1,17 @@
+package level1;
+
+public class Task2 {
+	public static void main(String[] agrs) {
+		Employee emp=new Employee(156,"Geetha","Developer",50000);
+		
+		//calling overrided toString() method
+		System.out.println(emp);
+		
+		//calling method and its overloaded method
+		emp.displayDetails();
+		System.out.println("Annual Salary without Bonus: "+emp.calculateAnnualSalary());
+		System.out.println("Annual Salary with Bonus: "+emp.calculateAnnualSalary(5000));
+		
+		
+	}
+}
