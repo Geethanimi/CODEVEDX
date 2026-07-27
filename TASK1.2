@@ -1,0 +1,28 @@
+package level1;
+import java.util.*;
+public class Task1_Fibonacci {
+
+	public static void main(String[] args) {
+		System.out.println("Enter the number : ");
+		int num=new Scanner(System.in).nextInt();
+		
+		//calling the fibonacci() method
+		fibonacci(num);
+	}
+
+	public static void fibonacci(int num) {
+		int n1=0,n2=1,n3; // initializing the numbers
+		if(num<0)return;
+		System.out.print("fibonacci series : ");
+		for(int i=0;i<num;i++) {
+			if(i==0) System.out.print(n1);
+			else if(i==1) System.out.print(", "+n2);
+			else {
+				n3=n1+n2;                 //updating the numbers
+				System.out.print(", "+n3);
+				n1=n2;n2=n3;
+			}
+		}
+		System.out.print(".");
+	}
+}
