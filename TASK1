@@ -1,1 +1,25 @@
+package level1;
+import java.util.*;
+public class Task1_AmstNum {
+	public static void main(String[] args) {
+		System.out.println("Enter the number to find whether it is Armstrong number: ");
+		int num = new Scanner(System.in).nextInt();
+		System.out.println(amstNum(num)); // 153=1+125+27=153
+	}
+	
+	public static String amstNum(int n) {
+		int c=(int)Math.log10(n)+1;	//counting the number of digits
+		int sum=0;	// sum to store the sum of powers
+		int on=n;	// on to store the original number for final comparison
+		while(n>0) {
+			int p=1,val=n%10; // val to get the last digit
+		for(int i=0;i<c;i++) {
+			p*=val; 	// multiply the val c times
+		}
+		sum+=p;  // add the power to the sum
+		n=n/10;  // remove the last digit
+		}
+		return sum==on?on+" is Armstrong number." : on+" is not an Armstrong number.";
+	}
+}
 
